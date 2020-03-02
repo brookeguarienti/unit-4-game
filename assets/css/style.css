@@ -2,3 +2,25 @@
 body {
     background-image: url('../images/congruent_pentagon.png');
 }
+
+
+
+.crystals {
+    margin-bottom: 25px;
+}
+
+.score {
+    margin-bottom: 50px;
+    background-color: #E8E8E8;
+}
+
+.user-score {
+    background-color: #E8E8E8;
+    margin-bottom: 50px;
+}
+
+.wins-losses {
+    background-color: #E8E8E8;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
