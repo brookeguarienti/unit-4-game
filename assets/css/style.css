@@ -3,8 +3,6 @@ body {
     background-image: url('../images/congruent_pentagon.png');
 }
 
-
-
 .crystals {
     margin-bottom: 25px;
 }
@@ -14,7 +12,7 @@ body {
     background-color: #E8E8E8;
 }
 
-.user-score {
+.counter {
     background-color: #E8E8E8;
     margin-bottom: 50px;
 }
@@ -23,4 +21,22 @@ body {
     background-color: #E8E8E8;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.computer-number {
+    background-color: #E8E8E8;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.directions {
+    background-color: #E8E8E8;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.title {
+    background-color: #E8E8E8;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
