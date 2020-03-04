@@ -1,7 +1,7 @@
 
 
 // number that computer randomly selects
-var targetRandomNum = 0;
+var targetNumber = 0;
 var wins = 0;
 var losses = 0;
 var counter = 0;
@@ -25,6 +25,34 @@ var img = [
     }
 ];
 
+// variable resetGame equals the function and holds the variables that will reset the game 
+var resetGame = function() {
+var targetNumber = 0;
+var wins = 0;
+var losses = 0;
+var counter = 0;
+var numberOptions = [];
+var img = [
+    {
+        name: "Blue Crystal",
+        value: 0,
+    },
+    {
+        name: "Clear Crystal",
+        value: 0,
+    },
+    {
+        name: "Red Crystal",
+        value: 0,
+    },
+    {
+        name: "Purple Crystal",
+        value: 0,
+    }
+];
+
+}
+
 min = 20;
 max = 120;
 
@@ -34,31 +62,51 @@ var targetNumber = Math.floor(Math.random() * (max - min + 1) ) + min;
 // puts the computer chosen number from var targetNumber to class computer-number displayed on screen 
 $(".computer-number").text(targetNumber);
 
+// for loop to loop through the numberOptions array 
+for (let i = 0; i < numberOptions.length; i++) {
+    img.attr("data-crystalvalue", numberOptions[i]);
+// selects the img     
+    // var img = $("<img>");
+    // img.attr("data-crystalvalue", numberOptions[i]);
+    // $("#crystals").append(img);
+}
+
+// adds the event listener "click" to each crystal img, and then assigns a random number to it
 $(".crystals").on("click", function() {
-    var crystalValue = ($(this).attr("data-img"));
+    min = 1;
+    max = 12;
+    var crystalValue = Math.floor(Math.random() * (max - min + 1) ) + min;
+    console.log(crystalValue);
+    
     crystalValue = parseInt(crystalValue);
+
     // add crystalValue to user's "counter", a global variable
     // with every click from each crystal, adds to the global counter// same as counter = counter + crystalValue
     counter += crystalValue; 
 
     // all of the same game win-lose logic applies
-    alert("New Score: " + counter);
+    $(".counter").text(counter);
 
-    if (counter === targetRandomNum){
-        alert("You win!");
-    } else if (counter >= targetRandomNum){
-        alert("You lose!");
+    // win logic 
+    if (counter === targetNumber){
+        wins++;
+       console.log(wins);
+       resetGame();
+       console.log(resetGame());
+       
+        $("#wins").text("wins: " + wins);
+    } else if (counter >= targetNumber) {
+        losses++;
+        console.log(losses);
+        resetGame();
+        console.log(resetGame());
+        
+        $("#losses").text("losses: " + losses);
+    } else{
+        return false;
     }
 });
-// for loop to loop through the numberOptions array 
-for (let i = 0; i < numberOptions.length; i++) {
 
-// selects the img     
-    // var img = $("<img>");
-    // img.attr("data-crystalvalue", numberOptions[i]);
-    // $("#crystals").append(img);
-    
-}
 
 
 
