@@ -8,8 +8,6 @@ var wins = 0;
 var losses = 0;
 // variable that holds user guesses
 var counter = 0;
-// //variable that holds array of number options
-// var numberOptions = [];
 // variable that holds each crystal item with name and value 
     // value set to 0 so it can hold randomly selected computer number
 var img = {
