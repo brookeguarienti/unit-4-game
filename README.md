@@ -1,6 +1,9 @@
 # unit-4-game
 This is an interactive game using jQuery
 
+# Visit the website 
+ https://brookeguarienti.github.io/unit-4-game/
+
 ## Goal
 The goal of this game is to match the users number to the computer number by clicking on the crystals, which each hold a value of their own. 
 
