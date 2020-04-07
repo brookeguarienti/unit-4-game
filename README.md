@@ -1,7 +1,7 @@
 # unit-4-game
 This is an interactive game using jQuery
 
-# Visit the website 
+## Visit the website 
  https://brookeguarienti.github.io/unit-4-game/
 
 ## Goal
